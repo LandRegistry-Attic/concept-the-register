@@ -1,8 +1,8 @@
-from concept_the_register import Titles
+from concept_the_register.titles.models import Title
 from rest_framework import serializers
 
 
-class TitlesSerializer(serializers.HyperlinkedModelSerializer):
+class TitleSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Titles
-        fields = ('owner')
+        model = Title
+        field = ('owner')

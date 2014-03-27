@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from concept_the_register import Titles
+from concept_the_register.titles.models import Title
 from rest_framework import viewsets
-from Titles.serializers import TitlesSerializer
+from concept_the_register.titles.serializers import TitleSerializer
 
 # Create your views here.
 
@@ -9,5 +9,5 @@ class TitlesViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows Titles to be viewed or edited.
     """
-    queryset = Titles.objects.all()
-    serializer_class = TitlesSerializer
+    queryset = Title.objects.all()
+    serializer_class = TitleSerializer

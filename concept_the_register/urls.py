@@ -1,10 +1,7 @@
 from django.conf.urls import url, patterns, include
-from concept_the_register import Titles
 from rest_framework import viewsets, routers
+from concept_the_register.titles.views import TitlesViewSet
 
-# ViewSets define the view behavior.
-class TitlesViewSet(viewsets.ModelViewSet):
-    model = Titles
 
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
